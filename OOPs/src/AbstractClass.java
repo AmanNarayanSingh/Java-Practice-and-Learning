@@ -3,7 +3,7 @@ abstract class AbstractParent{
 		System.out.println("Default constructor of parent abstract class is invoked.");
 	}
 	abstract void hello();
-	abstract void cisco();
+	abstract void company();
 	
 }
 
@@ -15,8 +15,8 @@ class GoodChild extends AbstractParent{
 	public void hello(){
 		System.out.println("Implementing method hello of parent abstract class.");
 	}
-	public void cisco(){
-		System.out.println("Implementing method Cisco of parent class.");
+	public void company(){
+		System.out.println("Implementing method company of parent class.");
 	}
 }
 
@@ -24,8 +24,8 @@ abstract class BadChild extends AbstractParent{   //declared as abstract bcoz he
 	public BadChild(){
 		System.out.println("This is a bad child so here not all of the declared functions are defined.");
 	}
-	public void cisco(){
-		System.out.println("Implementing method Cisco of parent class in BadChild.");
+	public void company(){
+		System.out.println("Implementing method company of parent class in BadChild.");
 	} 
 	//hello method is not implemented.
 }
@@ -36,7 +36,7 @@ public class AbstractClass {
 		// TODO Auto-generated method stub
 //		AbstractParent obj =new AbstractParent();  		//abstract class can't be used to create objects.
 		GoodChild obj=new GoodChild();					// inherited class object can be created as it contains implemented functions declared in abstract class.
-		obj.cisco();
+		obj.company();
 		obj.hello();
 		
 	}
